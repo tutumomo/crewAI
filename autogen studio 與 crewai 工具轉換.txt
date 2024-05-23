@@ -1,0 +1,15 @@
+
+find_papers_arxiv 原本是 autogen stuido 範例的 skills(Tools)，
+在 autogen stuido 未使用 class 定義類別，只使用函式定義來當成工具
+但 crewai 無法調用，所以還是改成"類別+函式"
+經測試正常，可以使用。
+
+autogen studio 的 skill 轉換成 crewai 的 tools 庫工具做法：
+1.放在專案資料夾的 tools 子資料夾內
+2.改成類別2行
+3.檔案名、類別名、函式名 皆不同(如果都相同可以嗎?待確認)
+
+crewai 的 tools 庫工具改成 autogen studio 的 skill 做法
+1.取消類別，改為函式(如果維持類別的定義，可以嗎?待確認)
+
+另外，還有 phidata 的 tools 庫如何轉換成 crewai 的 tools 庫工具做法？

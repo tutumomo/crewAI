@@ -16,8 +16,6 @@ rc-tests/*
 # ignore virtualenvs
 .venv
 venv*
-phienv*
-aienv*
 
 # ignore tmp dirs
 scratch
