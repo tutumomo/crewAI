@@ -12,3 +12,16 @@ old_en.json
 db/
 test.py
 rc-tests/*
+
+# ignore virtualenvs
+.venv
+venv*
+phienv*
+aienv*
+
+# ignore tmp dirs
+scratch
+junk
+tmp
+
+.ipynb_checkpoints
