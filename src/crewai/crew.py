@@ -50,7 +50,7 @@ class Crew(BaseModel):
         full_output: Whether the crew should return the full output with all tasks outputs or just the final output.
         task_callback: Callback to be executed after each task for every agents execution.
         step_callback: Callback to be executed after each step for every agents execution.
-        share_crew: Whether you want to share the complete crew infromation and execution with crewAI to make the library better, and allow us to train models.
+        share_crew: Whether you want to share the complete crew information and execution with crewAI to make the library better, and allow us to train models.
     """
 
     __hash__ = object.__hash__  # type: ignore
@@ -164,7 +164,9 @@ class Crew(BaseModel):
         """Set private attributes."""
         if self.memory:
             self._long_term_memory = LongTermMemory()
-            self._short_term_memory = ShortTermMemory(crew=self, embedder_config=self.embedder)
+            self._short_term_memory = ShortTermMemory(
+                crew=self, embedder_config=self.embedder
+            )
             self._entity_memory = EntityMemory(crew=self, embedder_config=self.embedder)
         return self
 
@@ -279,6 +281,10 @@ class Crew(BaseModel):
         }
 
         return result
+
+    def train(self, n_iterations: int) -> None:
+        # TODO: Implement training
+        pass
 
     def _run_sequential_process(self) -> str:
         """Executes tasks sequentially and returns the final output."""
